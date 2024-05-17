@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Patient</title>
+  <link rel="stylesheet" href="css/add-patient copy.css">
+  <link rel="stylesheet" href="css/responsive-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="addPatient.js"></script>
+  </head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+ 
+     <!-- Navbar section --> 
+     <header class="header_wrapper">
+      <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+                <img decoding="async" src="images/logo.png" class="img-fluid" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <i class="fas fa-stream navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav  menu-navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="admin.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="add patient copy.html">Add Patient</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="PatientDetails.html">Generate Report</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#team">View Report</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#testimonial">Testimonial</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#blog">About</a>
+                </li>
+                <li class="nav-item mt-3 mt-lg-0">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  </header>
+
+
+  <div class="container">
+    <h1 id="ff" >Add Patient Details</h1>
+    <!--<button onclick="dev()">Try it</button> -->
+    <form action="addPatient.php" method="POST">
+  
+      <label >First Name</label>
+      <input required type="text" class="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input required type="text" class="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="age">Gender</label>
+      <select required class="gender" name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+  
+      <label for="subject">Student ID</label>
+      <input required type="text" class="SID" name="SID" placeholder="Enter Sudent ID">
+
+      <label for="subject">Course</label>
+      <select required class="course" name="Branch">
+        <option >Select</option>
+        <option name="course" value="B.Tech">B.Tech</option>
+        <option name="course" value="BCA">BCA</option>
+        <option name="course" value="MCA">MCA</option>
+        <option name="course" value="BBA">BBA</option>
+        <option name="course" value="MCA">B.Com</option>
+        <option name="course" value="BBA">M.Com</option>
+      </select>
+
+      <label for="subject">Year</label>
+      <select required class="year" name="Year">
+        <option >Select</option>
+        <option name="year" value="1st">1st Year</option>
+        <option name="year" value="2nd">2nd Year</option>
+        <option name="year" value="3rd">3rd Year</option>
+        <option name="year" value="4th">4th Year</option>
+        <option name="year" value="5th">5th Year</option>
+      </select>
+      <br>
+      <br>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tests</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CBC</td>
+            <td><input name="CBC" type="text" id="customTest1"></td>
+          </tr>
+          <tr>
+            <td>KFT</td>
+            <td><input name="KFT" type="text" id="customTest2"></td>
+          </tr>
+          <tr>
+            <td>Lipid Profile</td>
+            <td><input name= "LFT" type="text" id="customTest3"></td>
+          </tr>
+          <tr>
+            <td>CRP</td>
+            <td><input name="CRP" type="text" id="customTest4"></td>
+          </tr>
+          <tr>
+            <td>Blood Sugar</td>
+            <td><input name="BS" type="text" id="customTest5"></td>
+          </tr>
+        </tbody>
+      </table>
+
+       
+       
+    
+      <a href="PatientDetails.html"><button onclick="createTableBody()"><input type="submit" value="Submit" onclick=""></button></a>
+     
+      <input type="button"  value="Back" onclick="">
+    </form>
+  </div>
+</body>
+</html>

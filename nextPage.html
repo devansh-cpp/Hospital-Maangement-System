@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Next Page</title>
+</head>
+<body>
+
+<h2>Student Details</h2>
+
+<div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" readonly>
+</div>
+<div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" readonly>
+</div>
+<div>
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" readonly>
+</div>
+<div>
+    <label for="studentID">Student ID:</label>
+    <input type="text" id="studentID" readonly>
+</div>
+<div>
+    <label for="course">Course:</label>
+    <input type="text" id="course" readonly>
+</div>
+<div>
+    <label for="year">Year:</label>
+    <input type="text" id="year" readonly>
+</div>
+<div>
+    <label for="tests">Tests:</label>
+    <input type="text" id="tests" readonly>
+</div>
+
+<script>
+    // Retrieve URL parameters and set input field values
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    document.getElementById('firstName').value = urlParams.get('firstName') || '';
+    document.getElementById('lastName').value = urlParams.get('lastName') || '';
+    document.getElementById('gender').value = urlParams.get('gender') || '';
+    document.getElementById('studentID').value = urlParams.get('studentID') || '';
+    document.getElementById('course').value = urlParams.get('course') || '';
+    document.getElementById('year').value = urlParams.get('year') || '';
+    document.getElementById('tests').value = urlParams.get('tests') || '';
+</script>
+
+</body>
+</html>
